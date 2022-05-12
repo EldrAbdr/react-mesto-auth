@@ -1,0 +1,31 @@
+.form__input {
+    max-width: 358px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d0d2d3;
+    margin: 3px auto 7px auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__input::-webkit-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form__input::-moz-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form__input:-moz-placeholder {
+    opacity: 1;
+    font-size: 14px;
+    font-weight: 400;
+}

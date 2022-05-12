@@ -1,0 +1,10 @@
+.hover-transparent {
+    -webkit-transition: opacity 0.8ms;
+    -o-transition: opacity 0.8ms;
+    transition: opacity 0.8ms;
+}
+
+
+.hover-transparent:hover {
+    opacity: 0.7;
+}

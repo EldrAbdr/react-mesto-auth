@@ -1,0 +1,8 @@
+.image-popup {
+    max-height: 75vh;
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}

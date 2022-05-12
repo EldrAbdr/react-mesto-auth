@@ -1,0 +1,9 @@
+.form_mini {
+    height: 181px;
+}
+
+@media screen and (max-width: 570px) {
+    .form {
+        height: 181px;
+    }
+}

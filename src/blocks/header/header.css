@@ -1,0 +1,32 @@
+.header {
+    max-width: 68.75%;
+    width: 100%;
+    min-height: 75px;
+    margin: 45px auto 0 auto;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 970px) {
+    .header {
+        margin: 28px auto 0 auto;
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .header {
+        max-width: 100%;
+        margin-top: 28px;
+        min-height: 56px;
+        max-height: 56px;
+    }
+}

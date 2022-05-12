@@ -1,0 +1,5 @@
+.card__like_black {
+    background-image: url('../../../../images/like_button-black.svg');
+    opacity: 1;
+    border: none;
+}

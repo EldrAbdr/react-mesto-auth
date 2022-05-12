@@ -1,0 +1,26 @@
+.profile__add-button {
+    background-image: url('../../../images/add_button.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.profile__add-button::-moz-focus-outer, ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 648px) {
+    .profile__add-button {
+        background-image: url('../../../images/add_button_wide.png');
+        width: 100%;
+        margin: 36px auto 0 auto;
+    }
+}
