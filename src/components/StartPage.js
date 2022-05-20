@@ -1,5 +1,5 @@
 import Header from "./Header";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function StartPage({
   name,
@@ -10,7 +10,7 @@ export default function StartPage({
   onCornerLinkClick,
   cornerLinkText,
   path,
-  showLoginMessage
+  showLoginMessage,
 }) {
   return (
     <div className="page">
@@ -37,11 +37,14 @@ export default function StartPage({
             {textButton}
           </button>
         </form>
-        {showLoginMessage?
+        {showLoginMessage ? (
           <div className="form__underSubmitLine">
             <p>Уже зарегистрированы?</p>
-            <Link to="/sign-in" className="form__underSubmitLink">Войти</Link>
-          </div> : ''}
+            <Link to="/sign-in" className="form__underSubmitLink">
+              Войти
+            </Link>
+          </div>
+        ) : ""}
       </div>
     </div>
   );

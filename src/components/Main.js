@@ -1,4 +1,3 @@
-import { api } from "../utils/Api";
 import { useState, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import Card from "./Card";
@@ -26,11 +25,11 @@ export default function Main({
 
   return (
     <div className="page">
-
       <Header
         userEmail={userEmail}
         onCornerLinkClick={handleSignOut}
         cornerLinkText="Выйти"
+        path="/sign-in"
       />
       <main className="container">
         <section className="profile">

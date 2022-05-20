@@ -1,5 +1,6 @@
 import headerLogo from "../images/logo.svg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Header({
   userEmail,
@@ -7,6 +8,11 @@ export default function Header({
   path,
   onCornerLinkClick,
 }) {
+
+  useEffect(() => {
+
+  },[userEmail]);
+
   return (
     <header className="header">
       <a href="#" className="hover-transparent">
