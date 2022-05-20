@@ -1,0 +1,11 @@
+.form__submit-button_white {
+    background-color: white;
+    color: black;
+    margin-top: 200px;
+}
+
+@media screen and (max-width: 615px) {
+    .form__submit-button_white {
+        margin-top: 173px;
+    }
+}

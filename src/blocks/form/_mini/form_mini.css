@@ -3,7 +3,7 @@
 }
 
 @media screen and (max-width: 570px) {
-    .form {
+    .form_mini {
         height: 181px;
     }
 }

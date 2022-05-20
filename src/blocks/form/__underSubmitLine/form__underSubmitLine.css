@@ -1,0 +1,15 @@
+.form__underSubmitLine {
+    max-width: 358px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 570px) {
+    .form__underSubmitLine {
+
+    }
+}
