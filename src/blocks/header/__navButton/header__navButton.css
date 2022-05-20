@@ -1,0 +1,14 @@
+.header__navButton {
+    display: none;
+}
+
+@media screen and (max-width: 615px) {
+    .header__navButton {
+        display: none;
+        background-image: url("../../../images/Group.svg");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        margin-right: 22px;
+    }
+}

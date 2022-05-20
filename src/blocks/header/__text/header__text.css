@@ -1,0 +1,12 @@
+.header__text {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 18px
+}
+
+@media screen and (max-width: 615px) {
+    .header__text {
+        font-size: 14px
+    }
+}

@@ -53,7 +53,7 @@ export default function AvatarEditPopup({isOpen, onUpdateAvatar, onClose}) {
         <InputError
           isinputValid={isLinkValid}
           errorText={linkErrorText}
-        ></InputError>
+        />
       </div>
     </PopupWithForm>
   );

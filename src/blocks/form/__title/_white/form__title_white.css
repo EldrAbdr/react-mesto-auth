@@ -1,0 +1,11 @@
+.form__title_white {
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 615px) {
+    .form__title_white {
+        font-size: 18px;
+        margin: 0 0 40px 0;
+    }
+}
