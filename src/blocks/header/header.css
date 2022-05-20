@@ -9,7 +9,7 @@
     display: flex;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
+    justify-content: space-between;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -24,9 +24,10 @@
 
 @media screen and (max-width: 615px) {
     .header {
-        max-width: 100%;
+        width: 100%;
         margin-top: 28px;
         min-height: 56px;
         max-height: 56px;
+        padding: 0 27px 0 27px;
     }
 }

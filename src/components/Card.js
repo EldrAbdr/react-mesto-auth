@@ -14,7 +14,7 @@ export default function Card({ card, onCardClick, onCardLike, onCardDelete }) {
     onCardClick(card);
   }
 
-  function handlelikeClick() {
+  function handleLikeClick() {
     onCardLike(card);
   }
 
@@ -41,7 +41,7 @@ export default function Card({ card, onCardClick, onCardLike, onCardDelete }) {
           <button
             type="button"
             className={`${cardLikeClassName} hover-transparent`}
-            onClick={handlelikeClick}
+            onClick={handleLikeClick}
           />
           <div className="card__like-number">{card.likes.length}</div>
         </div>

@@ -1,0 +1,11 @@
+@media screen and (max-width: 615px) {
+    .header__navBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .header__text:first-child {
+        margin-bottom: 8px;
+    }
+}

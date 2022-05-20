@@ -1,14 +1,14 @@
 import PopupWithForm from "./PopupWithForm";
 import { useState, useContext, useEffect, useRef } from "react";
 import { CurrentUserContext } from "../context/CurrentUserContext";
-import InputError from "./InputError";
+/*import InputError from "./InputError";*/
 
 export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const currentUser = useContext(CurrentUserContext);
-  const nameRef = useRef();
-  const descriptionRef = useRef();
+  /*const nameRef = useRef();
+  const descriptionRef = useRef();*/
 
   useEffect(() => {
     setName(currentUser?.name);
@@ -54,7 +54,7 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           required
           onChange={handleNameChange}
         />
-        <span className="form__input-error avatar-input-error"></span>
+        <span className="form__input-error avatar-input-error"/>
         <input
           type="text"
           id="profession-input"
@@ -67,7 +67,7 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           maxLength="200"
           onChange={handleDescriptionChange}
         />
-        <span className="form__input-error avatar-input-error"></span>
+        <span className="form__input-error avatar-input-error"/>
       </div>
     </PopupWithForm>
   );

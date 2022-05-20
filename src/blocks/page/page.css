@@ -4,6 +4,7 @@
     color: white;
     min-height: 100vh;
     min-width: 320px;
+    width: 100%;
     background-color: #000000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14,6 +15,6 @@
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: auto;
 }
