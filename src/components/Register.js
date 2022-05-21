@@ -51,7 +51,7 @@ export default function Register({
         />
         <InputError />
         <input
-          type="text"
+          type="password"
           id="profession-input"
           className="form__input form__input_black"
           placeholder="Password"

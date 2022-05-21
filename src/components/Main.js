@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import Card from "./Card";
 import { CurrentUserContext } from "../context/CurrentUserContext";

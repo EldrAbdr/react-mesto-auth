@@ -8,7 +8,9 @@ export const register = (email, password) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email: email, password: password }),
-  }).then((res) => res);
+  })
+    .then((res) => res)
+    .catch((err) => console.log(err));
 };
 
 export const login = (email, password) => {
@@ -19,7 +21,9 @@ export const login = (email, password) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email: email, password: password }),
-  }).then((res) => res);
+  })
+    .then((res) => res)
+    .catch((err) => console.log(err));
 };
 
 export const checkJwtValidity = (jwt) => {
@@ -30,17 +34,6 @@ export const checkJwtValidity = (jwt) => {
       Authorization: `Bearer ${jwt}`,
     },
   })
-    .then(checkResponse)
-    .then((res) => {
-      return res;
-    })
+    .then((res) => res.json())
     .catch((err) => console.log(err));
 };
-
-function checkResponse(res) {
-  if (res.ok) {
-    return res.json();
-  } else {
-    return Promise.reject(`Ошибка: ${res.status}`);
-  }
-}

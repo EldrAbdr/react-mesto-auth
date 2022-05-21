@@ -25,7 +25,6 @@ function App() {
   const [cards, setCards] = useState([]);
   const [loggedIn, setLoggedIn] = useState(true);
   const [isRegSuccess, setRegSuccess] = useState(false);
-  const [isLoginSuccess, setLoginSuccess] = useState(false);
   const [isInfoPopupOpen, setInfoPopupOpen] = useState(false);
 
   const history = useHistory();
@@ -57,11 +56,13 @@ function App() {
   function checkToken() {
     const token = localStorage.getItem("jwt");
     if (token) {
-      checkJwtValidity(token).then((userData) => {
-        setLoggedIn(true);
-        setUserEmail(userData.data.email);
-        history.push("/");
-      });
+      checkJwtValidity(token)
+        .then((userData) => {
+          setLoggedIn(true);
+          setUserEmail(userData.data.email);
+          history.push("/");
+        })
+        .catch((err) => console.log(err));
     } else {
       setLoggedIn(false);
     }
@@ -93,13 +94,14 @@ function App() {
             .then((data) => {
               if (data.token) {
                 setLoggedIn(true);
+                setUserEmail(email);
                 localStorage.setItem("jwt", data.token);
                 history.push("/");
               }
             })
             .catch((err) => console.log(err));
         } else {
-          setLoginSuccess(false);
+          setRegSuccess(false);
           setInfoPopupOpen(true);
         }
       })
@@ -186,11 +188,6 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }
-
-  function handleQuestionPopup(e) {
-    e.preventDefault();
-    closeAllPopups();
   }
 
   function closeAllPopups() {

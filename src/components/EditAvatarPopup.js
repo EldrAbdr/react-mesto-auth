@@ -1,29 +1,26 @@
 import PopupWithForm from "./PopupWithForm";
 import { useState, useRef, useEffect } from "react";
-import { CurrentUserContext } from "../context/CurrentUserContext";
 import InputError from "./InputError";
 
 export default function AvatarEditPopup({isOpen, onUpdateAvatar, onClose}) {
-  const [imageLink, setImageLink] = useState("");
-  const [isLinkValid, setLinkValid] = useState(false);
-  const [linkErrorText, setLinkErrorText] = useState("");
-  const [isSubmitClick, setIsSubmitClick] = useState(false);
+  const [imageLink, setImageLink] = useState('');
+  const [linkErrorText, setLinkErrorText] = useState('');
+  const [isFormValid, setFormValid] = useState(false);
   const inputRef = useRef();
 
   useEffect(() => {
     setImageLink("");
-    setLinkValid(inputRef.current.validity.valid);
+    setFormValid(inputRef.current.validity.valid);
   }, [isOpen]);
 
   function handleImageLinkChange() {
     setImageLink(inputRef.current.value);
-    setLinkValid(inputRef.current.validity.valid);
+    setFormValid(inputRef.current.validity.valid);
     setLinkErrorText(inputRef.current.validationMessage);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsSubmitClick(true);
     onUpdateAvatar(inputRef.current.value);
   }
 
@@ -36,7 +33,7 @@ export default function AvatarEditPopup({isOpen, onUpdateAvatar, onClose}) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      isFormValid={isLinkValid}
+      isFormValid={isFormValid}
     >
       <div className="form__inputs">
         <input
@@ -51,7 +48,7 @@ export default function AvatarEditPopup({isOpen, onUpdateAvatar, onClose}) {
           required
         />
         <InputError
-          isinputValid={isLinkValid}
+          isinputValid={isFormValid}
           errorText={linkErrorText}
         />
       </div>

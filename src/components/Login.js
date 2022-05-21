@@ -1,7 +1,7 @@
-import { useState } from "react";
 import InputError from "./InputError";
 import StartPage from "./StartPage";
 import InfoTooltip from "./InfoTooltip";
+import {useState} from "react";
 
 export default function Login({
   title,
@@ -52,7 +52,7 @@ export default function Login({
         />
         <InputError />
         <input
-          type="text"
+          type="password"
           id="profession-input"
           className="form__input form__input_black"
           placeholder="Password"
