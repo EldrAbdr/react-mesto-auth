@@ -15,14 +15,10 @@
 * HTML 5
 * CSS 3
 * JavaScript
-* FIGMA
-* Grid Layout
-* FlexBox
 * BEM
 * Webpack
 
-
 **Ссылка на GitHub Pages**
 
-* [Mesto](https://eldrabdr.github.io/mesto-react/)
+* [Mesto](https://eldrabdr.github.io/react-mesto-auth/)
 
